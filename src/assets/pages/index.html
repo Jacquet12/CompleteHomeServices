@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Louis Multiskill Solutions LLC</title>
     <link rel="stylesheet" href="/src/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="/src/assets/images/DALL·E 2024-09-14 00.49.05 - A professional logo for 'Louis Multiskill Solutions LLC', a company that offers residential electrical repair, plumbing, and masonry services. The log.webp" alt="Louis Multiskill Solutions LLC">
+            <img src="/src/assets/images/DALL·E 2024-09-14 01.18.51 - A modern and professional logo for 'Louis Multiskill Solutions LLC', featuring the company name integrated into the design. The logo should convey ser.webp" alt="Louis Multiskill Solutions LLC">
         </div>
-        <nav>
-            <ul class="nav-links">
+        <div class="mobile-menu" id="mobile-menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <ul>
                 <li><a href="#electrical">Electrical Services</a></li>
                 <li><a href="#plumbing">Plumbing Services</a></li>
                 <li><a href="#masonry">Masonry Services</a></li>
@@ -24,24 +28,24 @@
             <a href="#contact" class="btn">Let's Talk</a>
         </div>
         <div class="lang">
-            <a href="#" class="lang-link">PT</a>
+            <a href="#" class="lang-link">ES</a>
             <a href="#" class="lang-link">EN</a>
         </div>
     </header>
 
     <section class="slideshow-container">
-        <div class="mySlides">
-            <img src="assets/service1.jpg" style="width:100%">
+        <div class="mySlides fade">
+            <img src="/src/assets/images/led.jpeg" style="width:100%">
             <div class="text">Complete Electrical Panel Replacement</div>
         </div>
 
-        <div class="mySlides">
-            <img src="assets/service2.jpg" style="width:100%">
+        <div class="mySlides fade">
+            <img src="/src/assets/images/parede.jpeg" style="width:100%">
             <div class="text">Plumbing Services</div>
         </div>
 
-        <div class="mySlides">
-            <img src="assets/service3.jpg" style="width:100%">
+        <div class="mySlides fade">
+            <img src="/src/assets/images/5127460914814103389.jpg" style="width:100%">
             <div class="text">Masonry and Construction Services</div>
         </div>
 
@@ -49,29 +53,88 @@
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </section>
 
-    <!-- About the Company Section -->
-    <section id="about" class="about-section">
-        <h2>About Louis Multiskill Solutions LLC</h2>
-        <p>We offer a wide range of repair and maintenance services, including electrical repairs, plumbing, and masonry. Our goal is to deliver high-quality solutions with a focus on customer satisfaction.</p>
+    <section id="hero" class="hero-section">
+        <div class="hero-text">
+            <h1>Transforming Homes, Building Trust</h1>
+            <p>At Louis Multiskill Solutions LLC, we deliver exceptional home repair and construction services with a focus on quality, trust, and customer satisfaction.</p>
+        </div>
     </section>
 
-    <!-- Contact Section -->
+    <section id="mission-vision" class="mission-vision-section">
+        <div class="container">
+            <div class="mission-vision-container">
+                <div class="mission">
+                    <h2>Our Mission</h2>
+                    <p>We are a team determined to anticipate and meet the needs of our customers, always adding value to their homes.</p>
+                </div>
+                <div class="vision">
+                    <h2>Our Vision</h2>
+                    <p>To be the leading company in the construction industry, inspiring passion and trust in those who use our services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact-section">
         <h2>Contact Us</h2>
         <p>Email: contact@louis-multiskill.com</p>
         <p>Phone: (123) 456-7890</p>
-
         <div class="social-media">
-            <a href="https://facebook.com" target="_blank"><img src="assets/facebook-icon.png" alt="Facebook"></a>
-            <a href="https://instagram.com" target="_blank"><img src="assets/instagram-icon.png" alt="Instagram"></a>
-            <a href="https://twitter.com" target="_blank"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+            <a href="https://facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width:30px;">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:30px;">
+            </a>
+            <a href="https://wa.me/yourphonenumber" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:30px;">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="/src/assets/images/images.jpeg" alt="Twitter" style="width:30px;">
+            </a>                     
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Louis Multiskill Solutions LLC</p>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/src/assets/images/DALL·E 2024-09-14 01.18.51 - A modern and professional logo for 'Louis Multiskill Solutions LLC', featuring the company name integrated into the design. The logo should convey ser.webp" alt="Louis Multiskill Solutions LLC">
+                <p>Complete Home Repair Services</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#electrical">Electrical Services</a></li>
+                        <li><a href="#plumbing">Plumbing Services</a></li>
+                        <li><a href="#masonry">Masonry Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Louis Multiskill Solutions LLC - All rights reserved</p>
+            <div class="footer-policies">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Use</a>
+            </div>
+        </div>
     </footer>
 
-    <script src="scripts/slideshow.js"></script>
+    <script src="/src/scripts/slideshow.js"></script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

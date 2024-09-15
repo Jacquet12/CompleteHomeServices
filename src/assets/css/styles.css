@@ -501,7 +501,7 @@ footer {
 }
 
 .card:hover {
-    transform: scale(1.05); /* Efeito de hover para destacar */
+    transform: scale(1.05); 
 }
 
 /* Responsividade para telas menores */

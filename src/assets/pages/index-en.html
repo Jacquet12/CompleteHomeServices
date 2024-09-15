@@ -17,11 +17,12 @@
         </div>               
         <nav class="nav-links" id="nav-links">
             <ul>
+                <li><a href="index-en.html">Home</a></li>
                 <li><a href="#electrical">Electrical Services</a></li>
                 <li><a href="#plumbing">Plumbing Services</a></li>
-                <li><a href="#masonry">Masonry Services</a></li>
+                <li><a href="masonry-services.html">Masonry Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="about-us.html">About Us</a></li>
             </ul>
         </nav>
         <div class="contact-btn">
@@ -135,16 +136,14 @@
             const navLinks = document.getElementById('nav-links');
             const mobileMenuIcon = document.getElementById('mobile-menu-icon');
             
-            // Alternar a visibilidade do menu
             navLinks.classList.toggle('active');
     
-            // Alternar o ícone de "menu" para "fechar"
             if (navLinks.classList.contains('active')) {
                 mobileMenuIcon.classList.remove('fa-bars');
-                mobileMenuIcon.classList.add('fa-times'); // Ícone de fechar
+                mobileMenuIcon.classList.add('fa-times'); 
             } else {
                 mobileMenuIcon.classList.remove('fa-times');
-                mobileMenuIcon.classList.add('fa-bars'); // Ícone de menu
+                mobileMenuIcon.classList.add('fa-bars');
             }
         }
     </script>       

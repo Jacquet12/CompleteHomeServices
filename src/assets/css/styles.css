@@ -778,3 +778,10 @@ footer {
     font-size: 1.1em;
     color: #f4f4f9;
 }
+
+.services-list h2{
+    font-size: 2.5em;
+    color: #ff9900;
+    margin-bottom: 20px;
+    text-align: center;
+}

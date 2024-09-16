@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
     color: #f4f4f9;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -18,13 +20,14 @@ header {
     padding: 15px 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 10;
+    z-index: 10; /* Garante que o header esteja acima do slideshow */
 }
 
 .logo img {
     height: 60px;
 }
 
+/* Estilo para os links de navegação */
 .nav-links ul {
     display: flex;
     justify-content: space-around;
@@ -34,11 +37,11 @@ header {
 
 .nav-links ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #ffffff; 
     font-family: 'Times New Roman', serif;
     font-size: 1.2em;
-    padding: 10px 15px;
-    border: 2px solid transparent;
+    padding: 10px 15px; 
+    border: 2px solid transparent; 
     transition: all 0.3s ease;
 }
 
@@ -51,7 +54,7 @@ header {
 .nav-links ul li a:hover {
     color: #ff9900;
     border: 2px solid #ff9900;
-    background-color: rgba(255, 153, 0, 0.1);
+    background-color: rgba(255, 153, 0, 0.1); 
 }
 
 .contact-btn .btn {
@@ -68,6 +71,7 @@ header {
     color: #fff;
 }
 
+/* Mobile Menu */
 .mobile-menu {
     display: none;
     color: white;
@@ -76,10 +80,11 @@ header {
 }
 
 .mobile-menu.open i {
-    transform: rotate(90deg);
+    transform: rotate(90deg); /* Efeito de rotação para o ícone quando aberto */
     transition: transform 0.3s ease-in-out;
 }
 
+/* Ajuste para o mobile */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -91,11 +96,11 @@ header {
         flex-direction: column;
         text-align: center;
         padding: 20px 0;
-        z-index: 100;
+        z-index: 100; /* Garante que o menu fique sobre o slideshow */
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Quando ativado, o menu será visível */
     }
 
     .nav-links ul {
@@ -104,11 +109,11 @@ header {
     }
 
     .mobile-menu {
-        display: block;
+        display: block; /* Ícone de menu visível no mobile */
     }
 
     .contact-btn {
-        display: none;
+        display: none; /* Remove botão de contato no mobile */
     }
 
     .lang {
@@ -118,20 +123,20 @@ header {
 
 .slideshow-container {
     position: relative;
-    width: 50%;
-    height: 400px;
-    margin: 50px auto;
+    width: 50%; /* Largura fixa de 70%, mas você pode ajustar conforme necessário */
+    height: 400px; /* Altura fixa para manter o slideshow de tamanho constante */
+    margin: 50px auto; /* Centraliza o slideshow */
     overflow: hidden;
-    background-color: #111213;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: #111213; /* Fundo escuro para o slideshow */
+    border-radius: 15px; /* Arredonda os cantos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacá-lo */
 }
 
 .mySlides img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
+    height: 100%; /* Ocupará toda a altura do container */
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o container sem distorção */
+    border-radius: 15px; /* Arredonda as bordas das imagens também */
 }
 
 .prev, .next {
@@ -150,11 +155,11 @@ header {
 }
 
 .prev {
-    left: -50px;
+    left: -50px; /* Reposiciona o botão anterior */
 }
 
 .next {
-    right: -50px;
+    right: -50px; /* Reposiciona o botão próximo */
 }
 
 .prev:hover, .next:hover {
@@ -172,18 +177,43 @@ header {
     border-radius: 5px;
 }
 
+/* Estilo responsivo para telas menores */
 @media (max-width: 768px) {
     .slideshow-container {
-        width: 90%;
-        height: 300px;
+        width: 90%; /* Aumenta a largura para telas menores */
+        height: 300px; /* Reduz a altura no mobile para melhor visualização */
     }
 
     .prev, .next {
-        left: -25px;
+        left: -25px; /* Ajusta a posição dos botões no mobile */
         right: -25px;
     }
 }
 
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    color: #fff;
+    font-size: 1.2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Seção Hero */
 .hero-section {
     display: flex;
     justify-content: center;
@@ -208,6 +238,7 @@ header {
     max-width: 800px;
 }
 
+/* Seção Missão e Visão */
 .mission-vision-section {
     background-color: #1a1a1a;
     padding: 60px 0;
@@ -249,6 +280,7 @@ header {
     }
 }
 
+/* Seção de Contato */
 .contact-section {
     padding: 50px;
     background-color: #1a1a1a;
@@ -284,6 +316,7 @@ header {
     transform: scale(1.2);
 }
 
+/* FOOTER */
 footer {
     background-color: #1b1919;
     color: white;
@@ -452,9 +485,10 @@ footer {
     line-height: 1.8;
 }
 
+/* Section for cards */
 .our-cards-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
     gap: 20px;
     padding: 50px;
     background-color: #1a1a1a;
@@ -473,6 +507,7 @@ footer {
     margin-right: auto;
 }
 
+/* Individual card */
 .card {
     background-color: #111213;
     padding: 30px;
@@ -488,7 +523,7 @@ footer {
     text-align: center;
 }
 
-.card p,
+.card p, 
 .card ul {
     font-size: 1.1em;
     color: #f4f4f9;
@@ -504,9 +539,10 @@ footer {
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); 
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .our-cards-section {
         grid-template-columns: 1fr;
@@ -600,6 +636,7 @@ footer {
     color: #ff9900;
 }
 
+/* Hero Section for Plumbing Services */
 .plumbing-hero {
     background: url('/src/assets/images/plumbing-hero.jpg') no-repeat center center/cover;
     height: 60vh;
@@ -621,6 +658,7 @@ footer {
     color: #f4f4f9;
 }
 
+/* Services Overview Section */
 .services-overview {
     padding: 50px;
     background-color: #1a1a1a;
@@ -634,6 +672,7 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Gallery Section */
 .gallery {
     padding: 50px;
     background-color: #111;
@@ -646,6 +685,7 @@ footer {
     margin-bottom: 40px;
 }
 
+/* Ajustando a galeria para ser responsiva */
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -658,19 +698,19 @@ footer {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    height: 250px;
+    height: 250px; /* Define uma altura fixa para todas as imagens */
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 100%; /* Garante que todas as imagens ocupem todo o espaço disponível */
+    object-fit: cover; /* Corta a imagem de forma proporcional para preencher o contêiner */
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Zoom suave ao passar o mouse */
 }
 
 .gallery-item p {
@@ -687,31 +727,17 @@ footer {
     margin: 0;
 }
 
+/* Estilo responsivo para telas menores */
 @media (max-width: 768px) {
     .gallery-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Uma coluna no mobile */
     }
-}
-
-.services-list {
-    padding: 50px;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.services-list h2 {
-    font-size: 2.5em;
-    color: #ff9900;
-    margin-bottom: 40px;
 }
 
 .services-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 40px; /* Aumenta a distância entre os cards */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -723,11 +749,12 @@ footer {
     transition: transform 0.3s, background-color 0.3s;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px; /* Adiciona distância extra ao redor de cada card */
 }
 
 .service-card:hover {
     transform: scale(1.05);
-    background-color: #ff9900;
+    background-color: #201e1b;
     color: #ffffff;
 }
 

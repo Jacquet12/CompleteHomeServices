@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../images/DALL·E 2024-09-14 01.18.51 - A modern and professional logo for 'Louis Multiskill Solutions LLC', featuring the company name integrated into the design. The logo should convey ser.webp" alt="Louis Multiskill Solutions LLC">
+            <img src="/src/assets/images/DALL·E 2024-09-14 01.18.51 - A modern and professional logo for 'Louis Multiskill Solutions LLC', featuring the company name integrated into the design. The logo should convey ser.webp" alt="Louis Multiskill Solutions LLC">
         </div>
         <div class="mobile-menu" id="mobile-menu" onclick="toggleMenu()">
             <i id="mobile-menu-icon" class="fas fa-bars"></i> 
@@ -18,7 +18,7 @@
         <nav class="nav-links" id="nav-links">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#electrical">Electrical Services</a></li>
+                <li><a href="electrical-services.html">Electrical Services</a></li>
                 <li><a href="#plumbing">Plumbing Services</a></li>
                 <li><a href="masonry-services.html">Masonry Services</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -34,34 +34,37 @@
         </div>
     </header>
 
-    <section class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="../images/mlr7cfww.jpg" style="width:100%">
-            <div class="text">Complete Electrical Panel Replacement</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="../images/mlr7cfww.jpg" style="width:100%">
-            <div class="text">Plumbing Services</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="../images/5127460914814103389.jpg" style="width:100%">
-            <div class="text">Masonry and Construction Services</div>
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </section>
-
-    <section id="hero" class="hero-section">
+    <!-- Section Hero with new image background related to construction -->
+    <section id="hero" class="hero-section" style="background: url('https://images.unsplash.com/photo-1565104887537-4ae1bfa708f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;">
         <div class="hero-text">
             <h1>Transforming Homes, Building Trust</h1>
             <p>At Louis Multiskill Solutions LLC, we deliver exceptional home repair and construction services with a focus on quality, trust, and customer satisfaction.</p>
         </div>
     </section>
 
-    <section id="mission-vision" class="mission-vision-section">
+    <section id="services" class="services-overview">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <i class="fas fa-bolt"></i> <!-- Updated icon for electrical services -->
+                <h3>Electrical Services</h3>
+                <p>Professional electrical installation and repair services that ensure safety and compliance with modern standards.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-hand-holding-water"></i> <!-- Updated icon for plumbing services -->
+                <h3>Plumbing Services</h3>
+                <p>Reliable plumbing solutions, from pipe installation to repairs, keeping your home running smoothly.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-hard-hat"></i> <!-- Existing icon for masonry services -->
+                <h3>Masonry & Construction</h3>
+                <p>Transform your home with professional masonry and construction services tailored to your vision.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Mission and Vision with construction-related background image -->
+    <section id="mission-vision" class="mission-vision-section" style="background: url('https://images.unsplash.com/photo-1590362891970-208d7e7ca5b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;">
         <div class="container">
             <div class="mission-vision-container">
                 <div class="mission">
@@ -76,26 +79,34 @@
         </div>
     </section>
 
+    <!-- Contact section with additional social media icons -->
     <section id="contact" class="contact-section">
         <h2>Contact Us</h2>
-        <p>Email: contact@louis-multiskill.com</p>
-        <p>Phone: (123) 456-7890</p>
+        <p>Email: multiskillsolutions50@gmail.com</p>
+        <p>Phone: +1 (954) 594-6182</p>
         <div class="social-media">
-            <a href="https://facebook.com" target="_blank">
+            <a href="mailto:multiskillsolutions50@gmail.com" target="_blank">
+                <img src="/src/assets/images/gmail.jpeg" alt="Email" style="width:30px;">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61565846313559&mibextid=LQQJ4d&rdid=KaZS7dBFmlBS6t3z&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FkcY2UBrmcCMhCxyP%2F%3Fmibextid%3DLQQJ4d" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width:30px;">
             </a>
-            <a href="https://instagram.com" target="_blank">
+            <a href="https://www.instagram.com/multiskillsolutions?igsh=NWplZmJmeXZlbDV2&utm_source=qr" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:30px;">
             </a>
-            <a href="https://wa.me/yourphonenumber" target="_blank">
+            <a href="https://wa.me/19545946182" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:30px;">
             </a>
             <a href="https://twitter.com" target="_blank">
-                <img src="/src/assets/images/images.jpeg" alt="Twitter" style="width:30px;">
-            </a>                     
+                <i class="fab fa-twitter" style="font-size:30px; color:#1DA1F2;"></i> <!-- Added Twitter icon -->
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <i class="fab fa-linkedin" style="font-size:30px; color:#0077B5;"></i> <!-- Added LinkedIn icon -->
+            </a>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
@@ -130,7 +141,6 @@
         </div>
     </footer>
 
-    <script src="../../scripts/slideshow.js"></script>
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('nav-links');

@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -11,23 +10,23 @@ body {
     color: #f4f4f9;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #111213;
-    padding: 15px 30px;
+    padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 10; /* Garante que o header esteja acima do slideshow */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
 }
 
 .logo img {
-    height: 60px;
+    height: 50px;
 }
 
-/* Estilo para os links de navegação */
 .nav-links ul {
     display: flex;
     justify-content: space-around;
@@ -37,11 +36,11 @@ header {
 
 .nav-links ul li a {
     text-decoration: none;
-    color: #ffffff; 
+    color: #ffffff;
     font-family: 'Times New Roman', serif;
     font-size: 1.2em;
-    padding: 10px 15px; 
-    border: 2px solid transparent; 
+    padding: 10px 15px;
+    border: 2px solid transparent;
     transition: all 0.3s ease;
 }
 
@@ -54,13 +53,13 @@ header {
 .nav-links ul li a:hover {
     color: #ff9900;
     border: 2px solid #ff9900;
-    background-color: rgba(255, 153, 0, 0.1); 
+    background-color: rgba(255, 153, 0, 0.1);
 }
 
 .contact-btn .btn {
     text-decoration: none;
     border: 2px solid #ffffff;
-    padding: 8px 20px;
+    padding: 6px 15px;
     border-radius: 5px;
     color: #ffffff;
     transition: background-color 0.3s, color 0.3s;
@@ -71,7 +70,6 @@ header {
     color: #fff;
 }
 
-/* Mobile Menu */
 .mobile-menu {
     display: none;
     color: white;
@@ -79,13 +77,24 @@ header {
     cursor: pointer;
 }
 
-.mobile-menu.open i {
-    transform: rotate(90deg); /* Efeito de rotação para o ícone quando aberto */
-    transition: transform 0.3s ease-in-out;
+.lang {
+    margin-left: 10px;
 }
 
-/* Ajuste para o mobile */
 @media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .mobile-menu {
+        display: block;
+        order: 2;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
@@ -96,11 +105,11 @@ header {
         flex-direction: column;
         text-align: center;
         padding: 20px 0;
-        z-index: 100; /* Garante que o menu fique sobre o slideshow */
+        z-index: 100;
     }
 
     .nav-links.active {
-        display: flex; /* Quando ativado, o menu será visível */
+        display: flex;
     }
 
     .nav-links ul {
@@ -108,35 +117,42 @@ header {
         gap: 10px;
     }
 
-    .mobile-menu {
-        display: block; /* Ícone de menu visível no mobile */
-    }
-
     .contact-btn {
-        display: none; /* Remove botão de contato no mobile */
+        display: none;
     }
 
     .lang {
-        display: none;
+        order: 3;
+        display: inline-block;
+        margin-left: 0;
+    }
+
+    header {
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+
+    .mobile-menu {
+        margin-right: 10px;
     }
 }
 
 .slideshow-container {
     position: relative;
-    width: 50%; /* Largura fixa de 70%, mas você pode ajustar conforme necessário */
-    height: 400px; /* Altura fixa para manter o slideshow de tamanho constante */
-    margin: 50px auto; /* Centraliza o slideshow */
+    width: 50%;
+    height: 400px;
+    margin: 50px auto;
     overflow: hidden;
-    background-color: #111213; /* Fundo escuro para o slideshow */
-    border-radius: 15px; /* Arredonda os cantos */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacá-lo */
+    background-color: #111213;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .mySlides img {
     width: 100%;
-    height: 100%; /* Ocupará toda a altura do container */
-    object-fit: cover; /* Ajusta a imagem para cobrir todo o container sem distorção */
-    border-radius: 15px; /* Arredonda as bordas das imagens também */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .prev, .next {
@@ -155,11 +171,11 @@ header {
 }
 
 .prev {
-    left: -50px; /* Reposiciona o botão anterior */
+    left: -50px;
 }
 
 .next {
-    right: -50px; /* Reposiciona o botão próximo */
+    right: -50px;
 }
 
 .prev:hover, .next:hover {
@@ -177,15 +193,14 @@ header {
     border-radius: 5px;
 }
 
-/* Estilo responsivo para telas menores */
 @media (max-width: 768px) {
     .slideshow-container {
-        width: 90%; /* Aumenta a largura para telas menores */
-        height: 300px; /* Reduz a altura no mobile para melhor visualização */
+        width: 90%;
+        height: 300px;
     }
 
     .prev, .next {
-        left: -25px; /* Ajusta a posição dos botões no mobile */
+        left: -25px;
         right: -25px;
     }
 }
@@ -202,18 +217,6 @@ header {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.text {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    color: #fff;
-    font-size: 1.2em;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-}
-
-/* Seção Hero */
 .hero-section {
     display: flex;
     justify-content: center;
@@ -238,7 +241,6 @@ header {
     max-width: 800px;
 }
 
-/* Seção Missão e Visão */
 .mission-vision-section {
     background-color: #1a1a1a;
     padding: 60px 0;
@@ -280,7 +282,6 @@ header {
     }
 }
 
-/* Seção de Contato */
 .contact-section {
     padding: 50px;
     background-color: #1a1a1a;
@@ -316,7 +317,6 @@ header {
     transform: scale(1.2);
 }
 
-/* FOOTER */
 footer {
     background-color: #1b1919;
     color: white;
@@ -485,10 +485,9 @@ footer {
     line-height: 1.8;
 }
 
-/* Section for cards */
 .our-cards-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 50px;
     background-color: #1a1a1a;
@@ -507,7 +506,6 @@ footer {
     margin-right: auto;
 }
 
-/* Individual card */
 .card {
     background-color: #111213;
     padding: 30px;
@@ -542,7 +540,6 @@ footer {
     transform: scale(1.05); 
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .our-cards-section {
         grid-template-columns: 1fr;
@@ -636,7 +633,6 @@ footer {
     color: #ff9900;
 }
 
-/* Hero Section for Plumbing Services */
 .plumbing-hero {
     background: url('/src/assets/images/plumbing-hero.jpg') no-repeat center center/cover;
     height: 60vh;
@@ -658,7 +654,6 @@ footer {
     color: #f4f4f9;
 }
 
-/* Services Overview Section */
 .services-overview {
     padding: 50px;
     background-color: #1a1a1a;
@@ -672,7 +667,6 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Gallery Section */
 .gallery {
     padding: 50px;
     background-color: #111;
@@ -685,7 +679,6 @@ footer {
     margin-bottom: 40px;
 }
 
-/* Ajustando a galeria para ser responsiva */
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -698,19 +691,19 @@ footer {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    height: 250px; /* Define uma altura fixa para todas as imagens */
+    height: 250px;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%; /* Garante que todas as imagens ocupem todo o espaço disponível */
-    object-fit: cover; /* Corta a imagem de forma proporcional para preencher o contêiner */
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.05); /* Zoom suave ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .gallery-item p {
@@ -727,17 +720,16 @@ footer {
     margin: 0;
 }
 
-/* Estilo responsivo para telas menores */
 @media (max-width: 768px) {
     .gallery-container {
-        grid-template-columns: 1fr; /* Uma coluna no mobile */
+        grid-template-columns: 1fr;
     }
 }
 
 .services-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px; /* Aumenta a distância entre os cards */
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -749,7 +741,7 @@ footer {
     transition: transform 0.3s, background-color 0.3s;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 20px; /* Adiciona distância extra ao redor de cada card */
+    margin: 20px;
 }
 
 .service-card:hover {
@@ -784,4 +776,67 @@ footer {
     color: #ff9900;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.hero-section-home {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background: url('../images/worker-8959737.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: left;
+    padding: 0 50px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-card-home {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text-home h1 {
+    font-size: 2.2em;
+    color: #ff9900;
+    margin-bottom: 20px;
+}
+
+.hero-text-home p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero-section-home {
+        padding: 20px;
+    }
+
+    .hero-text-home h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-text-home p {
+        font-size: 1em;
+    }
+
+    .hero-card-home {
+        padding: 20px;
+    }
 }

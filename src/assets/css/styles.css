@@ -15,7 +15,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #111213;
-    padding: 10px 20px;
+    padding: 10px 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -78,21 +78,31 @@ header {
 }
 
 .lang {
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 @media (max-width: 768px) {
     header {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
     }
 
     .logo {
         order: 1;
     }
 
+    .lang {
+        display: inline-block;
+        order: 2;
+        margin-left: 50%;
+    }
+
     .mobile-menu {
         display: block;
-        order: 2;
+        order: 3;
+        margin-right: 10px;
     }
 
     .nav-links {
@@ -119,21 +129,6 @@ header {
 
     .contact-btn {
         display: none;
-    }
-
-    .lang {
-        order: 3;
-        display: inline-block;
-        margin-left: 0;
-    }
-
-    header {
-        justify-content: space-between;
-        padding-right: 20px;
-    }
-
-    .mobile-menu {
-        margin-right: 10px;
     }
 }
 
@@ -228,7 +223,7 @@ header {
 }
 
 .hero-text h1 {
-    font-size: 3.5em;
+    font-size: 1.5em;
     font-family: 'Georgia', serif;
     margin-bottom: 20px;
     font-weight: bold;
@@ -537,7 +532,7 @@ footer {
 }
 
 .card:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -662,7 +657,7 @@ footer {
 }
 
 .services-overview h2 {
-    font-size: 2.5em;
+    font-size: 1.5em;
     color: #ff9900;
     margin-bottom: 20px;
 }
@@ -674,7 +669,7 @@ footer {
 }
 
 .gallery h2 {
-    font-size: 2.5em;
+    font-size: 1.5em;
     color: #ff9900;
     margin-bottom: 40px;
 }
@@ -771,8 +766,9 @@ footer {
     color: #f4f4f9;
 }
 
-.services-list h2{
-    font-size: 2.5em;
+.services-list h2 {
+    margin-top: 12px;
+    font-size: 1.5em;
     color: #ff9900;
     margin-bottom: 20px;
     text-align: center;

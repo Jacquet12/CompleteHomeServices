@@ -93,24 +93,26 @@ header {
         order: 1;
     }
 
-    .lang {
-        display: inline-block;
+    /* Posicionar a seleção de idiomas no mobile */
+    .lang-dropdown {
         order: 2;
-        margin-left: 50%;
+        margin-left: auto;
     }
 
+    /* Mostrar o botão de menu no mobile */
     .mobile-menu {
         display: block;
         order: 3;
         margin-right: 10px;
     }
 
+    /* Ocultar os links de navegação no mobile por padrão */
     .nav-links {
         display: none;
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: #000000;
+        background-color: #000;
         width: 100%;
         flex-direction: column;
         text-align: center;
@@ -118,17 +120,31 @@ header {
         z-index: 100;
     }
 
+    /* Exibir os links de navegação ao abrir o menu */
     .nav-links.active {
         display: flex;
     }
 
+    /* Estilização da lista de navegação no mobile */
     .nav-links ul {
         flex-direction: column;
         gap: 10px;
     }
 
+    /* Esconder o botão de contato no mobile */
     .contact-btn {
         display: none;
+    }
+
+    /* Ajustar a seleção de idiomas no mobile */
+    .lang-btn {
+        padding: 5px;
+        font-size: 14px;
+        margin-right: 14PX;
+    }
+
+    .lang-dropdown-content {
+        min-width: 120px;
     }
 }
 
@@ -216,7 +232,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111213;
+    background-color: #151313;
     color: #ffffff;
     padding: 80px 20px;
     text-align: center;
@@ -835,4 +851,60 @@ footer {
     .hero-card-home {
         padding: 20px;
     }
+}
+
+.hidden {
+    display: none;
+}
+
+.lang a {
+    margin-right: 10px;
+}
+
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.lang-btn i {
+    margin-right: 8px;
+}
+
+.lang-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.lang-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.lang-dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.lang-dropdown:hover .lang-dropdown-content {
+    display: block;
+}
+
+.lang-dropdown:hover .lang-btn {
+    background-color: #555;
 }

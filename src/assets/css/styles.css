@@ -645,7 +645,7 @@ footer {
 }
 
 .plumbing-hero {
-    background: url('/src/assets/images/plumbing-hero.jpg') no-repeat center center/cover;
+    background: url('../images/plumbing-hero.jpg') no-repeat center center/cover;
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -796,7 +796,7 @@ footer {
     justify-content: flex-start;
     align-items: center;
     height: 100vh;
-    background: url('../images/worker-8959737.jpg') no-repeat center center/cover;
+    background: url('../images/construction-schedule-2000x1333.jpg') no-repeat center center/cover;
     color: #ffffff;
     text-align: left;
     padding: 0 50px;

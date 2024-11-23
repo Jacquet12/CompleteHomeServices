@@ -70,6 +70,12 @@ header {
     color: #fff;
 }
 
+@media (max-width: 480px) {
+    .contact-btn .btn {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+}
 .mobile-menu {
     display: none;
     color: white;
